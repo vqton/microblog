@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
-
+{% block title %}
+Ton
+{% endblock %}
 {% block content %}
-Hello world
+<p class="text-center">Hello {{ user.username }}</p>
+{% for post in posts %}
+<div>
+    <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+</div>
+{% endfor %}
+
 {% endblock %}
